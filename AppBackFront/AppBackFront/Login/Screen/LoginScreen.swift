@@ -145,7 +145,7 @@ class LoginScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         label.text = "Entrar com a Metamask"
         return label
     }()
