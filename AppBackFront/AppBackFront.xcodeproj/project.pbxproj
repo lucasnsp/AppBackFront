@@ -21,6 +21,7 @@
 		464D40CC2AA8AA8000D5DFDE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40CB2AA8AA8000D5DFDE /* AlertController.swift */; };
 		464D40D12AA8B1C800D5DFDE /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40D02AA8B1C800D5DFDE /* TabBarVC.swift */; };
 		464D40D52AA8B29700D5DFDE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40D42AA8B29700D5DFDE /* HomeVC.swift */; };
+		464D40D92AA8B70500D5DFDE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40D82AA8B70500D5DFDE /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		464D40CB2AA8AA8000D5DFDE /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		464D40D02AA8B1C800D5DFDE /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		464D40D42AA8B29700D5DFDE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		464D40D82AA8B70500D5DFDE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +158,26 @@
 		464D40D32AA8B23F00D5DFDE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				464D40D42AA8B29700D5DFDE /* HomeVC.swift */,
+				464D40D62AA8B6E300D5DFDE /* VC */,
+				464D40D72AA8B6EE00D5DFDE /* Screen */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		464D40D62AA8B6E300D5DFDE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				464D40D42AA8B29700D5DFDE /* HomeVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		464D40D72AA8B6EE00D5DFDE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				464D40D82AA8B70500D5DFDE /* HomeScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +264,7 @@
 				464D40D52AA8B29700D5DFDE /* HomeVC.swift in Sources */,
 				462C8C0C2AA60E8E00E85A9E /* UIViewController+Extension.swift in Sources */,
 				464D40CC2AA8AA8000D5DFDE /* AlertController.swift in Sources */,
+				464D40D92AA8B70500D5DFDE /* HomeScreen.swift in Sources */,
 				462C8C0E2AA617A600E85A9E /* String+Extension.swift in Sources */,
 				464D40D12AA8B1C800D5DFDE /* TabBarVC.swift in Sources */,
 				4602FBD52A87B8FA0028BED4 /* SceneDelegate.swift in Sources */,
