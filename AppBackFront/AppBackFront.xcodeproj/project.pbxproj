@@ -18,6 +18,7 @@
 		462C8C0C2AA60E8E00E85A9E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462C8C0B2AA60E8E00E85A9E /* UIViewController+Extension.swift */; };
 		462C8C0E2AA617A600E85A9E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462C8C0D2AA617A600E85A9E /* String+Extension.swift */; };
 		4645228F2A8AB1B6005CC18E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645228E2A8AB1B6005CC18E /* LoginScreen.swift */; };
+		464D40CC2AA8AA8000D5DFDE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40CB2AA8AA8000D5DFDE /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		462C8C0B2AA60E8E00E85A9E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		462C8C0D2AA617A600E85A9E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4645228E2A8AB1B6005CC18E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		464D40CB2AA8AA8000D5DFDE /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,9 @@
 		4602FBD12A87B8FA0028BED4 /* AppBackFront */ = {
 			isa = PBXGroup;
 			children = (
-				462C8C092AA60E2F00E85A9E /* Utils */,
 				464522902A8AB98B005CC18E /* Login */,
+				464D40CA2AA8AA6300D5DFDE /* Alert */,
+				462C8C092AA60E2F00E85A9E /* Utils */,
 				4602FBD22A87B8FA0028BED4 /* AppDelegate.swift */,
 				4602FBD42A87B8FA0028BED4 /* SceneDelegate.swift */,
 				4602FBDB2A87B8FC0028BED4 /* Assets.xcassets */,
@@ -118,6 +121,14 @@
 				4645228E2A8AB1B6005CC18E /* LoginScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		464D40CA2AA8AA6300D5DFDE /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				464D40CB2AA8AA8000D5DFDE /* AlertController.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				4645228F2A8AB1B6005CC18E /* LoginScreen.swift in Sources */,
 				4602FBD32A87B8FA0028BED4 /* AppDelegate.swift in Sources */,
 				462C8C0C2AA60E8E00E85A9E /* UIViewController+Extension.swift in Sources */,
+				464D40CC2AA8AA8000D5DFDE /* AlertController.swift in Sources */,
 				462C8C0E2AA617A600E85A9E /* String+Extension.swift in Sources */,
 				4602FBD52A87B8FA0028BED4 /* SceneDelegate.swift in Sources */,
 			);
