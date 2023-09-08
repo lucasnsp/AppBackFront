@@ -28,6 +28,8 @@
 		464D40E22AA9FC2500D5DFDE /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40E12AA9FC2500D5DFDE /* GenericService.swift */; };
 		464D40E52AA9FF8D00D5DFDE /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 464D40E42AA9FF8D00D5DFDE /* HomeData.json */; };
 		464D40E82AAA013800D5DFDE /* NFTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40E72AAA013800D5DFDE /* NFTData.swift */; };
+		467DE4AC2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467DE4AB2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift */; };
+		467DE4AF2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467DE4AE2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		464D40E12AA9FC2500D5DFDE /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		464D40E42AA9FF8D00D5DFDE /* HomeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
 		464D40E72AAA013800D5DFDE /* NFTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTData.swift; sourceTree = "<group>"; };
+		467DE4AB2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		467DE4AE2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		F068343D3F22D223DED454DF /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +183,7 @@
 			children = (
 				464D40D32AA8B23F00D5DFDE /* Home */,
 				464522902A8AB98B005CC18E /* Login */,
+				467DE4A92AAB4FAB000484D2 /* Cells */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -220,7 +225,7 @@
 		464D40DD2AA9FA3100D5DFDE /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				464D40E12AA9FC2500D5DFDE /* GenericService.swift */,
+				467DE4B12AAB50AD000484D2 /* Generic */,
 				464D40DE2AA9FA4E00D5DFDE /* HomeService */,
 			);
 			path = Service;
@@ -248,6 +253,47 @@
 				464D40E72AAA013800D5DFDE /* NFTData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		467DE4A92AAB4FAB000484D2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				467DE4AA2AAB4FB4000484D2 /* NftFilter */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		467DE4AA2AAB4FB4000484D2 /* NftFilter */ = {
+			isa = PBXGroup;
+			children = (
+				467DE4B02AAB5075000484D2 /* CollectionViewCell */,
+				467DE4AD2AAB504A000484D2 /* Screen */,
+			);
+			path = NftFilter;
+			sourceTree = "<group>";
+		};
+		467DE4AD2AAB504A000484D2 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				467DE4AE2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		467DE4B02AAB5075000484D2 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				467DE4AB2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		467DE4B12AAB50AD000484D2 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				464D40E12AA9FC2500D5DFDE /* GenericService.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 		8C70E3716DF0652354A61D30 /* Pods */ = {
@@ -388,6 +434,8 @@
 				4602FBD32A87B8FA0028BED4 /* AppDelegate.swift in Sources */,
 				464D40D52AA8B29700D5DFDE /* HomeVC.swift in Sources */,
 				462C8C0C2AA60E8E00E85A9E /* UIViewController+Extension.swift in Sources */,
+				467DE4AC2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift in Sources */,
+				467DE4AF2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift in Sources */,
 				464D40E22AA9FC2500D5DFDE /* GenericService.swift in Sources */,
 				464D40E02AA9FA6000D5DFDE /* HomeService.swift in Sources */,
 				464D40CC2AA8AA8000D5DFDE /* AlertController.swift in Sources */,
