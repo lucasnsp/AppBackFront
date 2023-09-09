@@ -30,6 +30,8 @@
 		464D40E82AAA013800D5DFDE /* NFTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40E72AAA013800D5DFDE /* NFTData.swift */; };
 		467DE4AC2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467DE4AB2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift */; };
 		467DE4AF2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467DE4AE2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift */; };
+		46EB51FC2AACA0370099F85E /* NftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB51FB2AACA0370099F85E /* NftTableViewCell.swift */; };
+		46EB52002AACA1410099F85E /* NftTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB51FF2AACA1410099F85E /* NftTableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		464D40E72AAA013800D5DFDE /* NFTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTData.swift; sourceTree = "<group>"; };
 		467DE4AB2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		467DE4AE2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftFilterCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		46EB51FB2AACA0370099F85E /* NftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftTableViewCell.swift; sourceTree = "<group>"; };
+		46EB51FF2AACA1410099F85E /* NftTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftTableViewCellScreen.swift; sourceTree = "<group>"; };
 		F068343D3F22D223DED454DF /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -258,18 +262,19 @@
 		467DE4A92AAB4FAB000484D2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				467DE4AA2AAB4FB4000484D2 /* NftFilter */,
+				46EB51FA2AAC9FE80099F85E /* NftTableViewCell */,
+				467DE4AA2AAB4FB4000484D2 /* NftFilterCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		467DE4AA2AAB4FB4000484D2 /* NftFilter */ = {
+		467DE4AA2AAB4FB4000484D2 /* NftFilterCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				467DE4B02AAB5075000484D2 /* CollectionViewCell */,
 				467DE4AD2AAB504A000484D2 /* Screen */,
 			);
-			path = NftFilter;
+			path = NftFilterCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		467DE4AD2AAB504A000484D2 /* Screen */ = {
@@ -294,6 +299,31 @@
 				464D40E12AA9FC2500D5DFDE /* GenericService.swift */,
 			);
 			path = Generic;
+			sourceTree = "<group>";
+		};
+		46EB51FA2AAC9FE80099F85E /* NftTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EB51FD2AACA10F0099F85E /* TableViewCell */,
+				46EB51FE2AACA1230099F85E /* Screen */,
+			);
+			path = NftTableViewCell;
+			sourceTree = "<group>";
+		};
+		46EB51FD2AACA10F0099F85E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EB51FB2AACA0370099F85E /* NftTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		46EB51FE2AACA1230099F85E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46EB51FF2AACA1410099F85E /* NftTableViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		8C70E3716DF0652354A61D30 /* Pods */ = {
@@ -444,6 +474,8 @@
 				462C8C0E2AA617A600E85A9E /* String+Extension.swift in Sources */,
 				464D40D12AA8B1C800D5DFDE /* TabBarVC.swift in Sources */,
 				4602FBD52A87B8FA0028BED4 /* SceneDelegate.swift in Sources */,
+				46EB52002AACA1410099F85E /* NftTableViewCellScreen.swift in Sources */,
+				46EB51FC2AACA0370099F85E /* NftTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
