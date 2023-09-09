@@ -23,6 +23,7 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.configSearchBarDelegate(delegate: self)
         viewModel.delegate(delegate: self)
         viewModel.fetchRequest(.request)
     }
@@ -30,8 +31,11 @@ class HomeVC: UIViewController {
 
 extension HomeVC: HomeViewModelDelegate {
     func success() {
-        print(#function)
-        screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+        DispatchQueue.main.async {
+            self.screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+            self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
+            self.screen?.tableView.reloadData()
+        }
     }
     
     func error() {
@@ -54,3 +58,21 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         return viewModel.sizeForItemAt
     }
 }
+
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NftTableViewCell.identifier, for: indexPath) as? NftTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentNft(indexPath: indexPath))
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt
+    }
+}
+
+
