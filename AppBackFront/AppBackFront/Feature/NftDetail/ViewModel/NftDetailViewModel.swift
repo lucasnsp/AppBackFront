@@ -9,9 +9,18 @@ import UIKit
 
 class NftDetailViewModel: NSObject {
 
-    let nft: Nft
+    private let nft: Nft
     
     init(nft: Nft) {
         self.nft = nft
     }
+    
+    public var numberOfRowsInSection: Int {
+        return 1
+    }
+    
+    public var nftImage: String {
+        return nft.nftImage ?? ""
+    }
+
 }
