@@ -2,10 +2,11 @@
 //  String+Extension.swift
 //  AppBackFront
 //
-//  Created by Lucas Neves dos santos pompeu on 04/09/23.
+//  Created by Caio Fabrini on 05/12/22.
 //
 
 import Foundation
+import UIKit
 
 public enum ValidType {
     case email
@@ -24,11 +25,27 @@ extension String {
         var regex = ""
         
         switch validType {
-        case.email:
+        case .email:
             regex = Regex.email.rawValue
-        case.password:
+        case .password:
             regex = Regex.password.rawValue
         }
-        return NSPredicate(format: format, regex).evaluate(with: self)
+        return NSPredicate(format:format, regex).evaluate(with: self)
     }
+    
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        
+        return ceil(boundingBox.height)
+    }
+    
+    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        
+        return ceil(boundingBox.width)
+    }
+    
+
 }
