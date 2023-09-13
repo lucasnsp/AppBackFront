@@ -16,7 +16,6 @@ class LatestDealTableViewCell: UITableViewCell {
     private lazy var screen: LatestDealTableViewCellScreen = {
         let view = LatestDealTableViewCellScreen()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.configTableViewProtocols(delegate: self, dataSource: self)
         return view
     }()
     
@@ -25,6 +24,7 @@ class LatestDealTableViewCell: UITableViewCell {
         selectionStyle = .none
         addViews()
         configConstraints()
+        screen.configTableViewProtocols(delegate: self, dataSource: self)
     }
     
     required init?(coder: NSCoder) {
@@ -56,7 +56,9 @@ extension LatestDealTableViewCell: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListOffersTableViewCell.identifier, for: indexPath) as? ListOffersTableViewCell
+        cell?.setupCell(data: viewModel.loadCurrentLatestDeal(indexPath: indexPath), isInicial: viewModel.isInicial(indexPath: indexPath), isFinal: viewModel.isFinal(indexPath: indexPath))
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
