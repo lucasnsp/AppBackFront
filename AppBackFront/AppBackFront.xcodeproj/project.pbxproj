@@ -26,6 +26,8 @@
 		46461A0A2AB1E6C80042765C /* LatestDealTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46461A092AB1E6C80042765C /* LatestDealTableViewCellViewModel.swift */; };
 		46461A0E2AB1EDB70042765C /* ListOffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46461A0D2AB1EDB70042765C /* ListOffersTableViewCell.swift */; };
 		46461A112AB1EDCF0042765C /* ListOffersTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46461A102AB1EDCF0042765C /* ListOffersTableViewCellScreen.swift */; };
+		46461A142AB32DCE0042765C /* MagnifyGlassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46461A132AB32DCE0042765C /* MagnifyGlassVC.swift */; };
+		46461A182AB32DF50042765C /* MagnifyGlassScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46461A172AB32DF50042765C /* MagnifyGlassScreen.swift */; };
 		464D40CC2AA8AA8000D5DFDE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40CB2AA8AA8000D5DFDE /* AlertController.swift */; };
 		464D40D12AA8B1C800D5DFDE /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40D02AA8B1C800D5DFDE /* TabBarVC.swift */; };
 		464D40D52AA8B29700D5DFDE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D40D42AA8B29700D5DFDE /* HomeVC.swift */; };
@@ -69,6 +71,8 @@
 		46461A092AB1E6C80042765C /* LatestDealTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestDealTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		46461A0D2AB1EDB70042765C /* ListOffersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOffersTableViewCell.swift; sourceTree = "<group>"; };
 		46461A102AB1EDCF0042765C /* ListOffersTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOffersTableViewCellScreen.swift; sourceTree = "<group>"; };
+		46461A132AB32DCE0042765C /* MagnifyGlassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifyGlassVC.swift; sourceTree = "<group>"; };
+		46461A172AB32DF50042765C /* MagnifyGlassScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnifyGlassScreen.swift; sourceTree = "<group>"; };
 		464D40CB2AA8AA8000D5DFDE /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		464D40D02AA8B1C800D5DFDE /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		464D40D42AA8B29700D5DFDE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -255,6 +259,31 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		46461A122AB32D880042765C /* MagnifyGlass */ = {
+			isa = PBXGroup;
+			children = (
+				46461A152AB32DD30042765C /* ViewController */,
+				46461A162AB32DDA0042765C /* Screen */,
+			);
+			path = MagnifyGlass;
+			sourceTree = "<group>";
+		};
+		46461A152AB32DD30042765C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46461A132AB32DCE0042765C /* MagnifyGlassVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		46461A162AB32DDA0042765C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				46461A172AB32DF50042765C /* MagnifyGlassScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		464D40CA2AA8AA6300D5DFDE /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +306,7 @@
 				464D40D32AA8B23F00D5DFDE /* Home */,
 				464522902A8AB98B005CC18E /* Login */,
 				46CC89162AAF4E35002664A8 /* NftDetail */,
+				46461A122AB32D880042765C /* MagnifyGlass */,
 				467DE4A92AAB4FAB000484D2 /* Cells */,
 			);
 			path = Feature;
@@ -652,6 +682,7 @@
 				464D40E22AA9FC2500D5DFDE /* GenericService.swift in Sources */,
 				464619FE2AB1DB2C0042765C /* UIView+Extension.swift in Sources */,
 				464D40E02AA9FA6000D5DFDE /* HomeService.swift in Sources */,
+				46461A182AB32DF50042765C /* MagnifyGlassScreen.swift in Sources */,
 				46461A032AB1E23E0042765C /* LatestDealTableViewCell.swift in Sources */,
 				46461A052AB1E2540042765C /* LatestDealTableViewCellScreen.swift in Sources */,
 				46461A112AB1EDCF0042765C /* ListOffersTableViewCellScreen.swift in Sources */,
@@ -659,6 +690,7 @@
 				464D40D92AA8B70500D5DFDE /* HomeScreen.swift in Sources */,
 				46CC89222AB086A8002664A8 /* NftImageTableViewCell.swift in Sources */,
 				464D40E82AAA013800D5DFDE /* NFTData.swift in Sources */,
+				46461A142AB32DCE0042765C /* MagnifyGlassVC.swift in Sources */,
 				462C8C0E2AA617A600E85A9E /* String+Extension.swift in Sources */,
 				46CC891C2AAF4EA8002664A8 /* NftDetailViewModel.swift in Sources */,
 				46CC892B2AB099B3002664A8 /* NftDescriptionTableViewCell.swift in Sources */,

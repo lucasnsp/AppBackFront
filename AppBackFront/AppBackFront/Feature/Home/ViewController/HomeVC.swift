@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         screen?.configSearchBarDelegate(delegate: self)
         viewModel.delegate(delegate: self)
-        viewModel.fetchRequest(.mock)
+        viewModel.fetchRequest(.request)
     }
 }
 

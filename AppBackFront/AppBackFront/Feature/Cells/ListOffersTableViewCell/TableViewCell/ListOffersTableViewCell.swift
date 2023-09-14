@@ -20,6 +20,7 @@ class ListOffersTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         addViews()
         configConstraints()
     }
@@ -44,6 +45,13 @@ class ListOffersTableViewCell: UITableViewCell {
     public func setupCell(data: LatestDeal, isInicial: Bool, isFinal: Bool) {
         if let url = URL(string: data.userImage ?? "") {
             screen.UserImageView.af.setImage(withURL: url, placeholderImage: UIImage(systemName: "person.circle.fill")?.withTintColor(.black))
+        }
+        
+        if isInicial {
+            screen.roundCorners(cornerRadiuns: 20, typeCorners: [.topLeft, .topRight])
+        }
+        if isFinal {
+            screen.roundCorners(cornerRadiuns: 20, typeCorners: [.bottomLeft, .bottomRight])
         }
         
         screen.layer.borderColor = UIColor.white.cgColor
