@@ -63,9 +63,9 @@ class QuotationEthTableViewCellScreen: UIView {
     }
     
     private func addViews() {
-        addSubview(coinEthImageView)
         addSubview(logoImageView)
         addSubview(backgroundView)
+        addSubview(coinEthImageView)
         backgroundView.addSubview(ethValueLabel)
         backgroundView.addSubview(ethValueInDollarsLabel)
         
@@ -91,6 +91,7 @@ class QuotationEthTableViewCellScreen: UIView {
             
             coinEthImageView.topAnchor.constraint(equalTo: topAnchor, constant: 36),
             coinEthImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
+            coinEthImageView.widthAnchor.constraint(equalToConstant: 240), 
 
         ])
     }

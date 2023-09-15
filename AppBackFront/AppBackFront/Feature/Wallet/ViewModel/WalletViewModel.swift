@@ -47,17 +47,23 @@ class WalletViewModel {
     }
     
     var numberOfRowsInSection: Int {
-        return 1
+        return 2
     }
     
-    public func loadCurrentQuotationEthereum(indexPath: IndexPath) -> QuotationEthereum {
+    public var quotationEthereum: QuotationEthereum {
         return walletData?.quotationEthereum ?? QuotationEthereum()
+    }
+    
+    public var latestTransactionsCell: LatestTransactionsCell {
+        return walletData?.latestTransactionsCell ?? LatestTransactionsCell()
     }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat {
         switch WalletNameCell(rawValue: indexPath.row) {
         case.quotationEth:
             return 250
+        case.transactionList:
+            return HeighLatestTransactions.height.rawValue * CGFloat(walletData?.latestTransactionsCell?.listOfTransactions?.count ?? 0 ) + 75
         default:
             return 0
         }
