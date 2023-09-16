@@ -12,7 +12,7 @@ class ProfileImageTableViewCellScreen: UIView {
     lazy var nftImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "user")
+        imageView.image = UIImage(named: "nft")
         return imageView
     }()
 

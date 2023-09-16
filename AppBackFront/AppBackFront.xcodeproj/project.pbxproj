@@ -28,6 +28,8 @@
 		463FB9CB2AB4BF390041DD08 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FB9CA2AB4BF390041DD08 /* ProfileViewModel.swift */; };
 		463FB9D12AB4C0330041DD08 /* ProfileImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FB9D02AB4C0330041DD08 /* ProfileImageTableViewCell.swift */; };
 		463FB9D32AB4C03F0041DD08 /* ProfileImageTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FB9D22AB4C03F0041DD08 /* ProfileImageTableViewCellScreen.swift */; };
+		463FB9D82AB5D1C00041DD08 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FB9D72AB5D1C00041DD08 /* ProfileTableViewCell.swift */; };
+		463FB9DA2AB5D1CC0041DD08 /* ProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FB9D92AB5D1CC0041DD08 /* ProfileTableViewCellScreen.swift */; };
 		4645228F2A8AB1B6005CC18E /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645228E2A8AB1B6005CC18E /* LoginScreen.swift */; };
 		464619FC2AB1DB210042765C /* CACornerMask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464619FB2AB1DB210042765C /* CACornerMask+Extension.swift */; };
 		464619FE2AB1DB2C0042765C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464619FD2AB1DB2C0042765C /* UIView+Extension.swift */; };
@@ -91,6 +93,8 @@
 		463FB9CA2AB4BF390041DD08 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		463FB9D02AB4C0330041DD08 /* ProfileImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageTableViewCell.swift; sourceTree = "<group>"; };
 		463FB9D22AB4C03F0041DD08 /* ProfileImageTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageTableViewCellScreen.swift; sourceTree = "<group>"; };
+		463FB9D72AB5D1C00041DD08 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		463FB9D92AB5D1CC0041DD08 /* ProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
 		4645228E2A8AB1B6005CC18E /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		464619FB2AB1DB210042765C /* CACornerMask+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CACornerMask+Extension.swift"; sourceTree = "<group>"; };
 		464619FD2AB1DB2C0042765C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -307,6 +311,7 @@
 		463FB9CC2AB4BFA20041DD08 /* ProfileCells */ = {
 			isa = PBXGroup;
 			children = (
+				463FB9D42AB5D1950041DD08 /* ProfileTableViewCell */,
 				463FB9CD2AB4C0030041DD08 /* ProfileImageTableViewCell */,
 			);
 			path = ProfileCells;
@@ -333,6 +338,31 @@
 			isa = PBXGroup;
 			children = (
 				463FB9D22AB4C03F0041DD08 /* ProfileImageTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		463FB9D42AB5D1950041DD08 /* ProfileTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				463FB9D52AB5D1A50041DD08 /* TableViewCell */,
+				463FB9D62AB5D1AC0041DD08 /* Screen */,
+			);
+			path = ProfileTableViewCell;
+			sourceTree = "<group>";
+		};
+		463FB9D52AB5D1A50041DD08 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				463FB9D72AB5D1C00041DD08 /* ProfileTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		463FB9D62AB5D1AC0041DD08 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				463FB9D92AB5D1CC0041DD08 /* ProfileTableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -930,6 +960,7 @@
 				4645228F2A8AB1B6005CC18E /* LoginScreen.swift in Sources */,
 				4602FBD32A87B8FA0028BED4 /* AppDelegate.swift in Sources */,
 				463FB9B62AB484B60041DD08 /* LatestTransactionsTableViewCellScreen.swift in Sources */,
+				463FB9D82AB5D1C00041DD08 /* ProfileTableViewCell.swift in Sources */,
 				463FB9D12AB4C0330041DD08 /* ProfileImageTableViewCell.swift in Sources */,
 				46461A1F2AB33C2C0042765C /* WalletScreen.swift in Sources */,
 				463FB9BA2AB487360041DD08 /* LatestTransactionsTableViewCellViewModel.swift in Sources */,
@@ -940,6 +971,7 @@
 				467DE4AC2AAB4FDC000484D2 /* NftFilterCollectionViewCell.swift in Sources */,
 				46461A0E2AB1EDB70042765C /* ListOffersTableViewCell.swift in Sources */,
 				463FB9C72AB4BEF40041DD08 /* ProfileVC.swift in Sources */,
+				463FB9DA2AB5D1CC0041DD08 /* ProfileTableViewCellScreen.swift in Sources */,
 				46CC892D2AB099D0002664A8 /* NftDescriptionTableViewCellScreen.swift in Sources */,
 				467DE4AF2AAB506E000484D2 /* NftFilterCollectionViewCellScreen.swift in Sources */,
 				46461A0A2AB1E6C80042765C /* LatestDealTableViewCellViewModel.swift in Sources */,
