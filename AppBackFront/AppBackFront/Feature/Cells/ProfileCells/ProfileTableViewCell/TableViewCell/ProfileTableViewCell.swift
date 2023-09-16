@@ -41,6 +41,9 @@ class ProfileTableViewCell: UITableViewCell {
         ])
     }
     
+    public func setupCell(delegate: ProfileTableViewCellScreenDelegate) {
+        screen.delegate(delegate: delegate)
+    }
 
 }
 
