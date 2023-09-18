@@ -58,10 +58,13 @@ extension LoginVC: LoginScreenProtocol {
                 // deu ruim
                 print(error?.localizedDescription ?? "")
                 self.alert?.getAlert(title: "Falha no Login", message: error?.localizedDescription ?? "", completion: {
-                    print("Botão pressionando")
+                   
                 })
             } else {
                 // não tenho erro.
+                let vc: TabBarVC = TabBarVC()
+                self.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
                 print("Sucesso")
             }
             
