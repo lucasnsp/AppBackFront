@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+final class HomeVC: UIViewController {
     
     var screen: HomeScreen?
     var viewModel = HomeViewModel()

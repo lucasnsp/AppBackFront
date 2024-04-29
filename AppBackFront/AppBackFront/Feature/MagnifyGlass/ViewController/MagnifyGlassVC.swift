@@ -8,7 +8,7 @@
 import UIKit
 import AlamofireImage
 
-class MagnifyGlassVC: UIViewController {
+final class MagnifyGlassVC: UIViewController {
     
     private var screen: MagnifyGlassScreen?
     private var urlImage: String

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuotationEthTableViewCellScreen: UIView {
+final class QuotationEthTableViewCellScreen: UIView {
     
     lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()

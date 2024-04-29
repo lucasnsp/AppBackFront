@@ -12,7 +12,7 @@ protocol WalletViewModelDelegate: AnyObject {
     func error()
 }
 
-class WalletViewModel {
+final class WalletViewModel {
     
     private let service: WalletService = WalletService()
     private weak var delegate: WalletViewModelDelegate?

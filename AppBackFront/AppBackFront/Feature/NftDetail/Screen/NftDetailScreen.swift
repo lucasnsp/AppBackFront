@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NftDetailScreen: UIView {
+final class NftDetailScreen: UIView {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()

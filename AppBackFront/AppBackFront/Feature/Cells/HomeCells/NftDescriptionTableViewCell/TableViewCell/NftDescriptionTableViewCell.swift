@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NftDescriptionTableViewCell: UITableViewCell {
+final class NftDescriptionTableViewCell: UITableViewCell {
     
     static let identifier: String = String(describing: NftDescriptionTableViewCell.self)
     

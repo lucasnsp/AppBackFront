@@ -8,7 +8,7 @@
 import UIKit
 import AlamofireImage
 
-class NftTableViewCell: UITableViewCell {
+final class NftTableViewCell: UITableViewCell {
     
     static let identifier: String = String(describing: NftTableViewCell.self)
     

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B883F5F611ECF64B04D8AC1 /* Pods_AppBackFront.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F068343D3F22D223DED454DF /* Pods_AppBackFront.framework */; };
+		3A4B5E6B2BE012E6009C2128 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4B5E6A2BE012E6009C2128 /* AlamofireImage */; };
+		3AD2797B2BE01B2000CA6B00 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2797A2BE01B2000CA6B00 /* Interface.swift */; };
+		3AD2797D2BE01FF700CA6B00 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2797C2BE01FF700CA6B00 /* Network.swift */; };
 		4602FBD32A87B8FA0028BED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602FBD22A87B8FA0028BED4 /* AppDelegate.swift */; };
 		4602FBD52A87B8FA0028BED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602FBD42A87B8FA0028BED4 /* SceneDelegate.swift */; };
 		4602FBD72A87B8FA0028BED4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602FBD62A87B8FA0028BED4 /* LoginVC.swift */; };
@@ -71,8 +73,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		182F142FDAE0DC233BF23D0A /* Pods-AppBackFront.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.debug.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.debug.xcconfig"; sourceTree = "<group>"; };
-		281AB6D6E866A7A14603E71F /* Pods-AppBackFront.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBackFront.release.xcconfig"; path = "Target Support Files/Pods-AppBackFront/Pods-AppBackFront.release.xcconfig"; sourceTree = "<group>"; };
+		3AD2797A2BE01B2000CA6B00 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		3AD2797C2BE01FF700CA6B00 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4602FBCF2A87B8FA0028BED4 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4602FBD22A87B8FA0028BED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4602FBD42A87B8FA0028BED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 		46CC892C2AB099D0002664A8 /* NftDescriptionTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDescriptionTableViewCellScreen.swift; sourceTree = "<group>"; };
 		46EB51FB2AACA0370099F85E /* NftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftTableViewCell.swift; sourceTree = "<group>"; };
 		46EB51FF2AACA1410099F85E /* NftTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftTableViewCellScreen.swift; sourceTree = "<group>"; };
-		F068343D3F22D223DED454DF /* Pods_AppBackFront.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppBackFront.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,30 +142,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4B5E6B2BE012E6009C2128 /* AlamofireImage in Frameworks */,
 				462C8C062AA60AA200E85A9E /* FirebaseAuth in Frameworks */,
 				462C8C082AA60AA200E85A9E /* FirebaseCrashlytics in Frameworks */,
-				3B883F5F611ECF64B04D8AC1 /* Pods_AppBackFront.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26F4F11AA28BD0C0F8AE45F3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F068343D3F22D223DED454DF /* Pods_AppBackFront.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4602FBC62A87B8FA0028BED4 = {
 			isa = PBXGroup;
 			children = (
 				4602FBD12A87B8FA0028BED4 /* AppBackFront */,
 				4602FBD02A87B8FA0028BED4 /* Products */,
-				8C70E3716DF0652354A61D30 /* Pods */,
-				26F4F11AA28BD0C0F8AE45F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +202,7 @@
 				464619FB2AB1DB210042765C /* CACornerMask+Extension.swift */,
 				462C8C0B2AA60E8E00E85A9E /* UIViewController+Extension.swift */,
 				462C8C0D2AA617A600E85A9E /* String+Extension.swift */,
+				3AD2797A2BE01B2000CA6B00 /* Interface.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -705,6 +697,7 @@
 			isa = PBXGroup;
 			children = (
 				464D40E12AA9FC2500D5DFDE /* GenericService.swift */,
+				3AD2797C2BE01FF700CA6B00 /* Network.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -818,15 +811,6 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		8C70E3716DF0652354A61D30 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				182F142FDAE0DC233BF23D0A /* Pods-AppBackFront.debug.xcconfig */,
-				281AB6D6E866A7A14603E71F /* Pods-AppBackFront.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -834,11 +818,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4602FBE32A87B8FC0028BED4 /* Build configuration list for PBXNativeTarget "AppBackFront" */;
 			buildPhases = (
-				8F346913364313A820BFD9E0 /* [CP] Check Pods Manifest.lock */,
 				4602FBCB2A87B8FA0028BED4 /* Sources */,
 				4602FBCC2A87B8FA0028BED4 /* Frameworks */,
 				4602FBCD2A87B8FA0028BED4 /* Resources */,
-				EB0013867B727D0EC9179ABB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -848,6 +830,7 @@
 			packageProductDependencies = (
 				462C8C052AA60AA200E85A9E /* FirebaseAuth */,
 				462C8C072AA60AA200E85A9E /* FirebaseCrashlytics */,
+				3A4B5E6A2BE012E6009C2128 /* AlamofireImage */,
 			);
 			productName = AppBackFront;
 			productReference = 4602FBCF2A87B8FA0028BED4 /* AppBackFront.app */;
@@ -861,7 +844,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					4602FBCE2A87B8FA0028BED4 = {
 						CreatedOnToolsVersion = 14.3;
@@ -879,6 +862,7 @@
 			mainGroup = 4602FBC62A87B8FA0028BED4;
 			packageReferences = (
 				462C8C042AA60AA200E85A9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3A4B5E692BE012E6009C2128 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 4602FBD02A87B8FA0028BED4 /* Products */;
 			projectDirPath = "";
@@ -904,48 +888,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8F346913364313A820BFD9E0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppBackFront-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB0013867B727D0EC9179ABB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppBackFront/Pods-AppBackFront-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		4602FBCB2A87B8FA0028BED4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -956,6 +898,7 @@
 				46461A252AB33F6D0042765C /* WalletService.swift in Sources */,
 				4602FBD72A87B8FA0028BED4 /* LoginVC.swift in Sources */,
 				46CC89262AB087B4002664A8 /* NftImageTableViewCellScreen.swift in Sources */,
+				3AD2797D2BE01FF700CA6B00 /* Network.swift in Sources */,
 				464D40DC2AA9F9AE00D5DFDE /* HomeViewModel.swift in Sources */,
 				4645228F2A8AB1B6005CC18E /* LoginScreen.swift in Sources */,
 				4602FBD32A87B8FA0028BED4 /* AppDelegate.swift in Sources */,
@@ -986,6 +929,7 @@
 				464D40CC2AA8AA8000D5DFDE /* AlertController.swift in Sources */,
 				463FB9BF2AB489220041DD08 /* ListOfTransactionTableViewCell.swift in Sources */,
 				464D40D92AA8B70500D5DFDE /* HomeScreen.swift in Sources */,
+				3AD2797B2BE01B2000CA6B00 /* Interface.swift in Sources */,
 				463FB9C92AB4BF160041DD08 /* ProfileScreen.swift in Sources */,
 				463FB9B42AB484A50041DD08 /* LatestTransactionsTableViewCell.swift in Sources */,
 				46CC89222AB086A8002664A8 /* NftImageTableViewCell.swift in Sources */,
@@ -1057,6 +1001,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1117,6 +1062,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1137,13 +1083,12 @@
 		};
 		4602FBE42A87B8FC0028BED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 182F142FDAE0DC233BF23D0A /* Pods-AppBackFront.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3WX9FH8392;
+				DEVELOPMENT_TEAM = 6SPUJN2479;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppBackFront/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1166,13 +1111,12 @@
 		};
 		4602FBE52A87B8FC0028BED4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 281AB6D6E866A7A14603E71F /* Pods-AppBackFront.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3WX9FH8392;
+				DEVELOPMENT_TEAM = 6SPUJN2479;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppBackFront/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1217,6 +1161,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3A4B5E692BE012E6009C2128 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 		462C8C042AA60AA200E85A9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1228,6 +1180,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A4B5E6A2BE012E6009C2128 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A4B5E692BE012E6009C2128 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		462C8C052AA60AA200E85A9E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 462C8C042AA60AA200E85A9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

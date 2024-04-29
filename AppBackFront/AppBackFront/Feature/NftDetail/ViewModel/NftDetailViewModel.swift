@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NftDetailViewModel: NSObject {
+final class NftDetailViewModel: NSObject {
 
     private let nft: Nft
     

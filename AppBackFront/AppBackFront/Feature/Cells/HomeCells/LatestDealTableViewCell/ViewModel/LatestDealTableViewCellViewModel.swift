@@ -11,7 +11,7 @@ enum HeighLatestDeal: CGFloat {
     case height = 70
 }
 
-class LatestDealTableViewCellViewModel: NSObject {
+final class LatestDealTableViewCellViewModel: NSObject {
     
     var nft: Nft?
     

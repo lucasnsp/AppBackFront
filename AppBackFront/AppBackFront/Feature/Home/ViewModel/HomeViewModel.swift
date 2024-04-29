@@ -12,7 +12,7 @@ protocol HomeViewModelDelegate: AnyObject {
     func error()
 }
 
-class HomeViewModel {
+final class HomeViewModel {
     
     private let service: HomeService = HomeService()
     private var nftData: NFTData?

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuotationEthTableViewCell: UITableViewCell {
+final class QuotationEthTableViewCell: UITableViewCell {
 
     static let identifier: String = String(describing: QuotationEthTableViewCell.self)
     

@@ -8,7 +8,7 @@
 import UIKit
 import AlamofireImage
 
-class ListOffersTableViewCell: UITableViewCell {
+final class ListOffersTableViewCell: UITableViewCell {
 
     static let identifier: String = String(describing: ListOffersTableViewCell.self)
     

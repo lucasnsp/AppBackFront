@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileImageTableViewCell: UITableViewCell {
+final class ProfileImageTableViewCell: UITableViewCell {
 
     static let identifier: String = String(describing: ProfileImageTableViewCell.self)
     

@@ -11,7 +11,7 @@ protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
 }
 
-class LoginScreen: UIView {
+final class LoginScreen: UIView {
     
     private weak var delegate: LoginScreenProtocol?
     

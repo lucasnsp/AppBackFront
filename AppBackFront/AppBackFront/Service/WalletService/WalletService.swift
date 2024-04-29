@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 
 protocol WalletServiceDelegate: GenericService {
@@ -14,24 +13,20 @@ protocol WalletServiceDelegate: GenericService {
      func getWallet(completion: @escaping completion<WalletData?>)
 }
 
-class WalletService: WalletServiceDelegate {
+final class WalletService: WalletServiceDelegate {
     
-    func getWallet(completion: @escaping completion<WalletData?>) {
-        let url: String = "https://run.mocky.io/v3/70318389-3b0c-47cf-a529-e66ca8cf050f"
-        
-        AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: WalletData.self) { response in
-            debugPrint(response)
-            switch response.result {
-            case.success(let success):
-                print("SUCCESS -> \(#function)")
-                completion(success, nil)
-            case.failure(let error):
-                print("ERROR -> \(#function)")
-                completion(nil, Error.errorRequest(error))
-            }
-        }
+    let network: Network
+    init(network: Network  = .shared) {
+        self.network = network
     }
     
+    func getWallet(completion: @escaping completion<WalletData?>) {
+        
+        network.requestData(url: .wallet, type: WalletData.self) { result, failure in
+                guard let result  else { return completion(nil, failure) }
+                completion(result, nil)
+            }
+        }
     
     func getWalletFromJson(completion: @escaping completion<WalletData?>) {
         if let url = Bundle.main.url(forResource: "WalletData", withExtension: "json") {

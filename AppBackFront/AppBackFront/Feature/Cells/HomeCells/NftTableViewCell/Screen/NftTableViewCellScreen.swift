@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NftTableViewCellScreen: UIView {
+final class NftTableViewCellScreen: UIView {
     
     lazy var viewBackground: UIView = {
         let view = UIView()

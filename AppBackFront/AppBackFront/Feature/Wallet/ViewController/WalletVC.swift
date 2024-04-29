@@ -12,7 +12,7 @@ enum  WalletNameCell: Int {
     case transactionList = 1
 }
 
-class WalletVC: UIViewController {
+final class WalletVC: UIViewController {
     
     var screen: WalletScreen?
     var viewModel: WalletViewModel = WalletViewModel()

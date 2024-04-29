@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileScreen: UIView {
+final class ProfileScreen: UIView {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()

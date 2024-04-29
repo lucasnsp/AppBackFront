@@ -11,7 +11,7 @@ protocol MagnifyGlassScreenDelegate: AnyObject {
     func tappedBackButton()
 }
 
-class MagnifyGlassScreen: UIView {
+final class MagnifyGlassScreen: UIView {
     
     private weak var delegate: MagnifyGlassScreenDelegate?
     

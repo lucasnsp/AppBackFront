@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LatestTransactionsTableViewCellScreen: UIView {
+final class LatestTransactionsTableViewCellScreen: UIView {
 
     lazy var titleLabel: UILabel = {
         let label = UILabel()

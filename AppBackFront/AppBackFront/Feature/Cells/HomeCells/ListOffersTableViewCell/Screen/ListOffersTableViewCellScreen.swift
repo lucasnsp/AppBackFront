@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListOffersTableViewCellScreen: UIView {
+final class ListOffersTableViewCellScreen: UIView {
     
     lazy var UserImageView: UIImageView = {
         let imageView = UIImageView()

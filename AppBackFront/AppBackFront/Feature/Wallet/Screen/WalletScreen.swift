@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WalletScreen: UIView {
+final class WalletScreen: UIView {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()

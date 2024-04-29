@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlertController: NSObject {
+final class AlertController: NSObject {
 
     var controller: UIViewController
     

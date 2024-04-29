@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LatestDealTableViewCell: UITableViewCell {
+final class LatestDealTableViewCell: UITableViewCell {
 
     static let identifier: String = String(describing: LatestDealTableViewCell.self)
     

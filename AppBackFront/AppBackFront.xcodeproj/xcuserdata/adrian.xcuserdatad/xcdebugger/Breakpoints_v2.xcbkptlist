@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "699E39C0-73B0-4BF6-A41B-85B8401082EC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F83D73AA-003A-416E-9DBE-4F92F8E2F51E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppBackFront/Service/WalletService/WalletService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getWallet(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F83D73AA-003A-416E-9DBE-4F92F8E2F51E - a1147ab103711503"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppBackFront.WalletService.getWallet(completion: (Swift.Optional&lt;AppBackFront.WalletData&gt;, Swift.Optional&lt;AppBackFront.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppBackFront"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Library/Mobile%20Documents/com~apple~CloudDocs/xCode/Forks/LucasnspAppBackFront/AppBackFront/AppBackFront/Service/WalletService/WalletService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25">
+               </Location>
+               <Location
+                  uuid = "F83D73AA-003A-416E-9DBE-4F92F8E2F51E - 4e909f6fa3309494"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;AppBackFront.WalletData&gt;, Swift.Optional&lt;AppBackFront.Error&gt;) -&gt; () in AppBackFront.WalletService.getWallet(completion: (Swift.Optional&lt;AppBackFront.WalletData&gt;, Swift.Optional&lt;AppBackFront.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AppBackFront"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adrian/Library/Mobile%20Documents/com~apple~CloudDocs/xCode/Forks/LucasnspAppBackFront/AppBackFront/AppBackFront/Service/WalletService/WalletService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
