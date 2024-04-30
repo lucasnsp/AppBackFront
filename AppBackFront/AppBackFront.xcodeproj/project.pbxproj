@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A4B5E6B2BE012E6009C2128 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4B5E6A2BE012E6009C2128 /* AlamofireImage */; };
+		3A1835932BE0D5260086D01B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3A1835922BE0D5260086D01B /* README.md */; };
 		3AD2797B2BE01B2000CA6B00 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2797A2BE01B2000CA6B00 /* Interface.swift */; };
 		3AD2797D2BE01FF700CA6B00 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2797C2BE01FF700CA6B00 /* Network.swift */; };
 		4602FBD32A87B8FA0028BED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602FBD22A87B8FA0028BED4 /* AppDelegate.swift */; };
@@ -73,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A1835922BE0D5260086D01B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3AD2797A2BE01B2000CA6B00 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		3AD2797C2BE01FF700CA6B00 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4602FBCF2A87B8FA0028BED4 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +143,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4B5E6B2BE012E6009C2128 /* AlamofireImage in Frameworks */,
 				462C8C062AA60AA200E85A9E /* FirebaseAuth in Frameworks */,
 				462C8C082AA60AA200E85A9E /* FirebaseCrashlytics in Frameworks */,
 			);
@@ -154,6 +154,7 @@
 		4602FBC62A87B8FA0028BED4 = {
 			isa = PBXGroup;
 			children = (
+				3A1835922BE0D5260086D01B /* README.md */,
 				4602FBD12A87B8FA0028BED4 /* AppBackFront */,
 				4602FBD02A87B8FA0028BED4 /* Products */,
 			);
@@ -830,7 +831,6 @@
 			packageProductDependencies = (
 				462C8C052AA60AA200E85A9E /* FirebaseAuth */,
 				462C8C072AA60AA200E85A9E /* FirebaseCrashlytics */,
-				3A4B5E6A2BE012E6009C2128 /* AlamofireImage */,
 			);
 			productName = AppBackFront;
 			productReference = 4602FBCF2A87B8FA0028BED4 /* AppBackFront.app */;
@@ -862,7 +862,6 @@
 			mainGroup = 4602FBC62A87B8FA0028BED4;
 			packageReferences = (
 				462C8C042AA60AA200E85A9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				3A4B5E692BE012E6009C2128 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 4602FBD02A87B8FA0028BED4 /* Products */;
 			projectDirPath = "";
@@ -878,6 +877,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1835932BE0D5260086D01B /* README.md in Resources */,
 				464D40E52AA9FF8D00D5DFDE /* HomeData.json in Resources */,
 				4602FBDF2A87B8FC0028BED4 /* LaunchScreen.storyboard in Resources */,
 				46461A272AB3403E0042765C /* WalletData.json in Resources */,
@@ -1161,14 +1161,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3A4B5E692BE012E6009C2128 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.3.0;
-			};
-		};
 		462C8C042AA60AA200E85A9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1180,11 +1172,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3A4B5E6A2BE012E6009C2128 /* AlamofireImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A4B5E692BE012E6009C2128 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
-			productName = AlamofireImage;
-		};
 		462C8C052AA60AA200E85A9E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 462C8C042AA60AA200E85A9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

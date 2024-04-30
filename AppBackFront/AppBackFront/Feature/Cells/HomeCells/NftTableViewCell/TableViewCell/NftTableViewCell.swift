@@ -6,11 +6,11 @@
 //
 
 import UIKit
-import AlamofireImage
 
 final class NftTableViewCell: UITableViewCell {
     
     static let identifier: String = String(describing: NftTableViewCell.self)
+    private var network: Network = .shared
     
     private lazy var screen: NftTableViewCellScreen = {
         let view = NftTableViewCellScreen()
@@ -43,10 +43,11 @@ final class NftTableViewCell: UITableViewCell {
     
     public func setupCell(data: Nft) {
         if let urlNFT: URL = URL(string: data.nftImage ?? ""), let urlUser: URL = URL(string: data.userImage ?? "") {
-            screen.nftImageView.af.setImage(withURL: urlNFT, placeholderImage: UIImage(named: "threeButtons"))
+            
+            configureNftImage(url: urlNFT)
             screen.nftImageView.backgroundColor = .white
             
-            screen.userImageView.af.setImage(withURL: urlUser, placeholderImage: UIImage(systemName: "person.circle.fill"))
+            configUserImageView(url: urlUser)
             screen.userImageView.backgroundColor = .white
         }
         screen.priceLabel.text = data.price ?? ""
@@ -55,4 +56,31 @@ final class NftTableViewCell: UITableViewCell {
         screen.userLabel.text = data.userName
     }
     
+    private func configUserImageView(url: URL) {
+        network.requestImage(url: url) { result, failure in
+            if let failure {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.userImageView.image = UIImage(systemName: "person.circle.fill")
+                }
+            } else {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.userImageView.image = result
+                }
+            }
+        }
+    }
+    
+    private func configureNftImage(url: URL) {
+        network.requestImage(url: url) { result, failure in
+            if let failure {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.nftImageView.image = UIImage(systemName: "threeButtons")
+                }
+            } else {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.nftImageView.image = result
+                }
+            }
+        }
+    }
 }
