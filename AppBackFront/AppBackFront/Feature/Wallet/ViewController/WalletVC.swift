@@ -5,7 +5,7 @@
 //  Created by Lucas Neves dos santos pompeu on 14/09/23.
 //
 
-import UIKit
+import SwiftUI
 
 enum  WalletNameCell: Int {
     case quotationEth = 0
@@ -58,7 +58,12 @@ extension WalletVC: UITableViewDelegate, UITableViewDataSource {
             
         case.quotationEth:
             let cell = tableView.dequeueReusableCell(withIdentifier: QuotationEthTableViewCell.identifier, for: indexPath) as? QuotationEthTableViewCell
-            cell?.setupCell(data: viewModel.quotationEthereum)
+            
+           // cell?.setupCell(data: viewModel.quotationEthereum)
+            cell?.contentConfiguration = UIHostingConfiguration {
+                QuotationEthCell(quotationEthereum: viewModel.quotationEthereum)
+            }
+            
             return cell ?? UITableViewCell()
             
         case.transactionList:

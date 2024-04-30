@@ -19,11 +19,11 @@ final class QuotationEthTableViewCellScreen: UIView {
     lazy var backgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 58/255, green: 52/255, blue: 57/255, alpha: 1.0)
+        view.backgroundColor = QuotationCellColors.cellBackground
         view.clipsToBounds = true
         view.layer.cornerRadius = 18
         view.layer.borderWidth = 1.5
-        view.layer.borderColor = UIColor(red: 131/255, green: 127/255, blue: 131/255, alpha: 1).cgColor
+        view.layer.borderColor = QuotationCellColors.borderColor
         return view
     }()
     
@@ -38,7 +38,7 @@ final class QuotationEthTableViewCellScreen: UIView {
     lazy var ethValueInDollarsLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor(red: 255/255, green: 152/255, blue: 255/255, alpha: 1)
+        label.textColor = QuotationCellColors.ethValueTextColor
         label.font = UIFont.boldSystemFont(ofSize: 14)
         return label
     }()
@@ -53,7 +53,7 @@ final class QuotationEthTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1)
+        backgroundColor = QuotationCellColors.background
         addViews()
         configConstraints()
     }

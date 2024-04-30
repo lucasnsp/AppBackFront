@@ -36,7 +36,7 @@ final class QuotationEthTableViewCell: UITableViewCell {
             screen.topAnchor.constraint(equalTo: topAnchor),
             screen.leadingAnchor.constraint(equalTo: leadingAnchor),
             screen.trailingAnchor.constraint(equalTo: trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: bottomAnchor),
+            screen.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
@@ -44,6 +44,8 @@ final class QuotationEthTableViewCell: UITableViewCell {
         screen.ethValueLabel.text = "\(data.ethValue ?? 0) ETH"
         screen.ethValueInDollarsLabel.text = "$ \(data.valueInDollars ?? 0)"
         screen.coinEthImageView.image = UIImage(named: data.coinEthImage ?? "")
+     
+        
     }
 
 }
