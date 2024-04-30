@@ -58,7 +58,7 @@ final class NftTableViewCell: UITableViewCell {
     
     private func configUserImageView(url: URL) {
         network.requestImage(url: url) { result, failure in
-            if let failure {
+            if failure != nil {
                 RunLoop.main.perform { [weak self] in
                     self?.screen.userImageView.image = UIImage(systemName: "person.circle.fill")
                 }
@@ -72,7 +72,7 @@ final class NftTableViewCell: UITableViewCell {
     
     private func configureNftImage(url: URL) {
         network.requestImage(url: url) { result, failure in
-            if let failure {
+            if failure != nil {
                 RunLoop.main.perform { [weak self] in
                     self?.screen.nftImageView.image = UIImage(systemName: "threeButtons")
                 }

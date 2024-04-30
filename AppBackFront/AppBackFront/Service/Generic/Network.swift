@@ -33,7 +33,7 @@ final class Network {
         session.dataTask(with: url) { data, response, error in
             guard error == nil else { return completionHandler(nil, Error.network(name: "Conection Error")) }
             guard let status = response as? HTTPURLResponse, (200...299).contains(status.statusCode) else { return completionHandler(nil, Error.network(name: "Status code"))  }
-            debugPrint(response.debugDescription)
+         //   debugPrint(response.debugDescription)
             guard let data else { return completionHandler(nil, Error.network(name: "Error Data")) }
             do {
                 let info = try JSONDecoder().decode(JSON.self, from: data)
@@ -48,7 +48,7 @@ final class Network {
         session.dataTask(with: url) { data, response, error in
             guard error == nil else { return completionHandler(nil, Error.network(name: "Conection Error")) }
             guard let status = response as? HTTPURLResponse, (200...299).contains(status.statusCode) else { return completionHandler(nil, Error.network(name: "Status code"))  }
-            debugPrint(response.debugDescription)
+         //   debugPrint(response.debugDescription)
             
             guard let data, let image = UIImage(data: data) else { return completionHandler(nil, Error.network(name: "Imager error")) }
             completionHandler(image, nil)

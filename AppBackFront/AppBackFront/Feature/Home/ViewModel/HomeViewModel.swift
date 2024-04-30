@@ -14,38 +14,29 @@ protocol HomeViewModelDelegate: AnyObject {
 
 final class HomeViewModel {
     
-    private let service: HomeService = HomeService()
+    private let service: HomeService
     private var nftData: NFTData?
     private var searchNftData: NFTData?
     private weak var delegate: HomeViewModelDelegate?
+    
+    
+    init(service: HomeService = HomeService()) {
+        self.service = service
+    }
     
     public func delegate(delegate:HomeViewModelDelegate?) {
         self.delegate = delegate
     }
     
-    public func fetchRequest(_ typeFetch: TypeFetch) {
-        switch typeFetch {
-        case .mock:
-            service.getHomeFromJson { result, failure in
-                if let result {
-                    self.nftData = result
-                    self.searchNftData = result
-                    self.delegate?.success()
-                } else {
-                    print(failure as Any)
-                    self.delegate?.error()
-                }
-            }
-        case .request:
-            service.getHome { result, failure in
-                if let result {
-                    self.nftData = result
-                    self.searchNftData = result
-                    self.delegate?.success()
-                } else {
-                    print(failure as Any)
-                    self.delegate?.error()
-                }
+    public func fetchRequest() {
+        service.getHomeFromJson { result, failure in
+            if let result {
+                self.nftData = result
+                self.searchNftData = result
+                self.delegate?.success()
+            } else {
+          //      print(failure as Any)
+                self.delegate?.error()
             }
         }
     }

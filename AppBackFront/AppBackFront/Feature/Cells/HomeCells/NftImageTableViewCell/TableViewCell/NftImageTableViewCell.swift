@@ -51,7 +51,7 @@ final class NftImageTableViewCell: UITableViewCell {
             screen.nftImageView.image = UIImage(systemName: "threeButtons")
         }
         network.requestImage(url: url) { result, failure in
-            if let failure {
+            if failure != nil {
                 RunLoop.main.perform { [weak self] in
                     self?.screen.nftImageView.image = UIImage(systemName: "threeButtons")
                 }

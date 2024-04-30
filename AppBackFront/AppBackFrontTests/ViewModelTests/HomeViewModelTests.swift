@@ -1,5 +1,5 @@
 //
-//  AppBackFrontTests.swift
+//  HomeViewModelTests.swift
 //  AppBackFrontTests
 //
 //  Created by Adrian Iraizos Mendoza on 30/4/24.
@@ -11,11 +11,13 @@ import XCTest
 
 final class HomeViewModelTests: XCTestCase {
     var sut: HomeViewModel!
-    
+    var service: HomeService!
+    var network: Network!
     
     override func setUpWithError() throws {
+        service = HomeService(network: Network(urlProtocol: URLSessionMock.self))
         sut = HomeViewModel()
-        sut.fetchRequest(.mock)
+        sut.fetchRequest()
     }
 
     override func tearDownWithError() throws {
@@ -59,7 +61,7 @@ final class HomeViewModelTests: XCTestCase {
     }
     
     func testSetFilter_ShouldBe() {
-        sut.fetchRequest(.mock)
+        sut.fetchRequest()
         let indexPath = IndexPath(row: 4, section: 0)
         let searchText = "m"
         sut.setFilter(indexPath: indexPath, searchText: searchText)

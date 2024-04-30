@@ -22,7 +22,7 @@ final class NetworkTests: XCTestCase {
     func testRequestDataNFTData_ShouldBe3() {
         let expectation = XCTestExpectation(description: "carga en callback de nftData")
         network.requestData(url: .nftData, type: NFTData.self) { result, failure in
-            self.isFailure(failure)
+            isFailure(failure)
             let list = try! XCTUnwrap(result?.nftList)
             XCTAssertEqual(list.count,3)
             expectation.fulfill()
@@ -33,7 +33,7 @@ final class NetworkTests: XCTestCase {
     func testRequestDataWalletData_ShouldBe3() {
         let expectation = XCTestExpectation(description: "carga en callback de walletData")
         network.requestData(url: .wallet, type: WalletData.self) { result, failure in
-            self.isFailure(failure)
+            isFailure(failure)
             let list = try! XCTUnwrap(result?.latestTransactionsCell?.listOfTransactions)
             XCTAssertEqual(list.count,4)
             expectation.fulfill()
@@ -44,7 +44,7 @@ final class NetworkTests: XCTestCase {
     func testImage_Should() {
         let expectation = XCTestExpectation(description: "carga en callback de image")
         network.requestImage(url: TestURL.image) { result, failure in
-            self.isFailure(failure)
+            isFailure(failure)
             let image = try! XCTUnwrap(result)
             XCTAssertEqual(image.size.width, 50)
             expectation.fulfill()
@@ -52,9 +52,10 @@ final class NetworkTests: XCTestCase {
         wait(for: [expectation],timeout: 1)
     }
     
-    func isFailure(_ failure: Error?) {
-        if failure != nil {
-            XCTFail("no se ha podido convertir")
-        }
+}
+
+func isFailure(_ failure: Error?) {
+    if failure != nil {
+        XCTFail("no se ha podido convertir")
     }
 }
