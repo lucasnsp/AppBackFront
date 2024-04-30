@@ -80,7 +80,55 @@
                 "value_dollar" : 1393.49,
                 "date_and_hour": "03/08/2022 16:05"
                 
-            }
+            },
+            {
+                           "type": "entry",
+                           "id_transaction" : "abc123",
+                           "image" : "symbol.eth",
+                           "price_eth" : 2.5,
+                           "value_dollar" : 2893.75,
+                           "date_and_hour": "12/09/2023 09:30"
+                       },
+                       {
+                           "type": "exit",
+                           "id_transaction" : "def456",
+                           "image" : "image.exit",
+                           "price_eth" : 1.9,
+                           "value_dollar" : 2201.34,
+                           "date_and_hour": "15/09/2023 14:45"
+                       },
+                       {
+                           "type": "entry",
+                           "id_transaction" : "ghi789",
+                           "image" : "symbol.eth",
+                           "price_eth" : 2.1,
+                           "value_dollar" : 2431.68,
+                           "date_and_hour": "18/09/2023 17:20"
+                       },
+                       {
+                           "type": "exit",
+                           "id_transaction" : "jkl012",
+                           "image" : "image.exit",
+                           "price_eth" : 2.0,
+                           "value_dollar" : 2315.98,
+                           "date_and_hour": "22/09/2023 10:00"
+                       },
+                       {
+                           "type": "entry",
+                           "id_transaction" : "mno345",
+                           "image" : "symbol.eth",
+                           "price_eth" : 2.3,
+                           "value_dollar" : 2659.01,
+                           "date_and_hour": "25/09/2023 12:30"
+                       },
+                       {
+                           "type": "exit",
+                           "id_transaction" : "pqr678",
+                           "image" : "image.exit",
+                           "price_eth" : 2.2,
+                           "value_dollar" : 2543.79,
+                           "date_and_hour": "28/09/2023 16:15"
+                       }
         ]
     }
 }

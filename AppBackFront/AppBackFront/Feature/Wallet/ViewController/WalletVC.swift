@@ -29,7 +29,7 @@ final class WalletVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate(delegate: self)
-        viewModel.fetch(.mock)
+        viewModel.fetch(.request)
     }
     
     

@@ -12,10 +12,21 @@ final class Network {
     static let shared = Network()
     
     typealias completion <T> = (_ result: T, _ failure: Error?) -> Void
-    private let session: URLSession
     
-    init(session: URLSession = .shared) {
-        self.session = session
+    var urlProtocol: URLProtocol.Type?
+    
+    init(urlProtocol: URLProtocol.Type? = nil) {
+        self.urlProtocol = urlProtocol
+    }
+    
+    private var session: URLSession {
+        if let urlProtocol {
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [urlProtocol]
+            return URLSession(configuration: configuration)
+        } else {
+            return URLSession.shared
+        }
     }
     
     func requestData<JSON: Codable>(url: URL, type: JSON.Type, completionHandler: @escaping completion<JSON?>) {
