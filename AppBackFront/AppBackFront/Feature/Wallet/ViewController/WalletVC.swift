@@ -58,8 +58,6 @@ extension WalletVC: UITableViewDelegate, UITableViewDataSource {
             
         case.quotationEth:
             let cell = tableView.dequeueReusableCell(withIdentifier: QuotationEthTableViewCell.identifier, for: indexPath) as? QuotationEthTableViewCell
-            
-           // cell?.setupCell(data: viewModel.quotationEthereum)
             cell?.contentConfiguration = UIHostingConfiguration {
                 QuotationEthCell(quotationEthereum: viewModel.quotationEthereum)
             }
@@ -68,7 +66,11 @@ extension WalletVC: UITableViewDelegate, UITableViewDataSource {
             
         case.transactionList:
             let cell = tableView.dequeueReusableCell(withIdentifier: LatestTransactionsTableViewCell.identifier, for: indexPath) as? LatestTransactionsTableViewCell
-            cell?.setupCell(data: viewModel.latestTransactionsCell)
+           // cell?.setupCell(data: viewModel.latestTransactionsCell)
+            
+            cell?.contentConfiguration = UIHostingConfiguration {
+                LatestTransactionsViewCell(cell: viewModel.latestTransactionsCell)
+            }
             return cell ?? UITableViewCell()
             
         default:

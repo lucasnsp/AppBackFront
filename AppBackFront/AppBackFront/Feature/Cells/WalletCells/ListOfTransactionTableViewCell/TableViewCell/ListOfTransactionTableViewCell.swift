@@ -20,7 +20,7 @@ final class ListOfTransactionTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
-        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
+        backgroundColor = TransactionCellColors.background
         addViews()
         configConstraints()
     }
@@ -50,14 +50,15 @@ final class ListOfTransactionTableViewCell: UITableViewCell {
         
         if data.type == "exit" {
             screen.priceEthLabel.text = "-\(data.priceEth ?? 0) ETH"
-            screen.priceEthLabel.textColor = UIColor(red: 69/255, green: 191/255, blue: 229/255, alpha: 1)
-            screen.valueInDollarLabel.textColor = UIColor(red: 122/255, green: 235/255, blue: 255/255, alpha: 1)
-            screen.dateEndHourLabel.textColor = UIColor(red: 122/255, green: 235/255, blue: 255/255, alpha: 1)
+            screen.priceEthLabel.textColor = TransactionCellColors.Exit.priceLabel
+            screen.valueInDollarLabel.textColor = TransactionCellColors.Exit.valueLabel
+            
+            screen.dateEndHourLabel.textColor = TransactionCellColors.Exit.dateEndHourLabel
         } else {
             screen.priceEthLabel.text = "+\(data.priceEth ?? 0) ETH"
-            screen.priceEthLabel.textColor = UIColor(red: 183/255, green: 0/255, blue: 170/255, alpha: 1)
-            screen.valueInDollarLabel.textColor = UIColor(red: 255/255, green: 152/255, blue: 255/255, alpha: 1)
-            screen.dateEndHourLabel.textColor = UIColor(red: 255/255, green: 152/255, blue: 255/255, alpha: 1)
+            screen.priceEthLabel.textColor =  TransactionCellColors.Other.priceLabel
+            screen.valueInDollarLabel.textColor = TransactionCellColors.Other.valueLabel
+            screen.dateEndHourLabel.textColor = TransactionCellColors.Other.dateEndHourLabel
         }
         
         screen.layer.borderColor = UIColor.white.cgColor

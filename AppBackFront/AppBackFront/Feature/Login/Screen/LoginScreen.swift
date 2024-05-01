@@ -56,7 +56,7 @@ final class LoginScreen: UIView {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
-        tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0) // #0343434
+        tf.backgroundColor = UIColor(resource: .loginBackground) // #0343434
         tf.borderStyle = .roundedRect
         tf.keyboardType = .emailAddress
         tf.attributedPlaceholder = NSAttributedString(string: "Login", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.4)])
@@ -72,7 +72,7 @@ final class LoginScreen: UIView {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
-        tf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1.0) // #0343434
+        tf.backgroundColor = UIColor(resource: .loginBackground) // #0343434
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
         tf.isSecureTextEntry = true
@@ -89,7 +89,7 @@ final class LoginScreen: UIView {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Recuperar Senha", for: .normal)
-        button.setTitleColor(UIColor(red: 231/255, green: 48/255, blue: 214/255, alpha: 1.0), for: .normal) // #e730d6
+        button.setTitleColor(UIColor(resource: .loginTitle), for: .normal) // #e730d6
         button.addTarget(self, action: #selector(tappedRecoverPasswordButton), for: .touchUpInside)
         return button
     }()
@@ -129,7 +129,7 @@ final class LoginScreen: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
-        view.layer.borderColor = UIColor(red: 207/255, green: 0/255, blue: 192/255, alpha: 1).cgColor // #cf00c0
+        view.layer.borderColor = UIColor(resource: .loginBorder).cgColor // #cf00c0
         view.layer.borderWidth = 2
         return view
     }()
