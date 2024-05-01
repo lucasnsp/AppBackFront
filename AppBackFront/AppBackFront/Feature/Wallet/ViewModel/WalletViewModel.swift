@@ -12,50 +12,44 @@ protocol WalletViewModelDelegate: AnyObject {
     func error()
 }
 
-class WalletViewModel {
+final class WalletViewModel {
     
-    private let service: WalletService = WalletService()
+    private let service: WalletService
     private weak var delegate: WalletViewModelDelegate?
     private var walletData: WalletData?
+    
+    init(service: WalletService = WalletService()) {
+        self.service = service
+    }
     
     public func delegate(delegate: WalletViewModelDelegate?) {
         self.delegate = delegate
     }
     
     
-    public func fetch(_ type: TypeFetch) {
-        switch type {
-        case .mock:
-            service.getWalletFromJson { result, failure in
-                if let result {
-                    self.walletData = result
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error()
-                }
-            }
-        case .request:
-            service.getWallet { result, failure in
-                if let result {
-                    self.walletData = result
-                    self.delegate?.success()
-                } else {
-                    self.delegate?.error()
-                }
+    public func fetch() {
+        
+        service.getWallet { result, failure in
+            if let result {
+                self.walletData = result
+                self.delegate?.success()
+            } else {
+                self.delegate?.error()
             }
         }
     }
+    
     
     var numberOfRowsInSection: Int {
         return 2
     }
     
     public var quotationEthereum: QuotationEthereum {
-        return walletData?.quotationEthereum ?? QuotationEthereum()
+        walletData?.quotationEthereum ?? QuotationEthereum()
     }
     
     public var latestTransactionsCell: LatestTransactionsCell {
-        return walletData?.latestTransactionsCell ?? LatestTransactionsCell()
+        walletData?.latestTransactionsCell ?? LatestTransactionsCell()
     }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat {

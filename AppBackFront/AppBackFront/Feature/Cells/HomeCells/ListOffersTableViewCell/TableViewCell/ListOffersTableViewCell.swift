@@ -6,11 +6,11 @@
 //
 
 import UIKit
-import AlamofireImage
 
-class ListOffersTableViewCell: UITableViewCell {
+final class ListOffersTableViewCell: UITableViewCell {
 
     static let identifier: String = String(describing: ListOffersTableViewCell.self)
+    let network: Network = .shared
     
     private lazy var screen: ListOffersTableViewCellScreen = {
         let view = ListOffersTableViewCellScreen()
@@ -43,9 +43,7 @@ class ListOffersTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data: LatestDeal, isInicial: Bool, isFinal: Bool) {
-        if let url = URL(string: data.userImage ?? "") {
-            screen.UserImageView.af.setImage(withURL: url, placeholderImage: UIImage(systemName: "person.circle.fill")?.withTintColor(.black))
-        }
+        configureUserImage(urlImage: data.userImage)
         
         if isInicial {
             screen.roundCorners(cornerRadiuns: 20, typeCorners: [.topLeft, .topRight])
@@ -61,4 +59,20 @@ class ListOffersTableViewCell: UITableViewCell {
         screen.lastVizualizationLabel.text = data.lastAccess ?? ""
     }
 
+    private func configureUserImage(urlImage: String?) {
+        guard let urlImage, let url = URL(string: urlImage) else { return
+            screen.UserImageView.image = UIImage(systemName: "person.circle.fill")
+        }
+        network.requestImage(url: url) { result, failure in
+            if failure != nil {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.UserImageView.image = UIImage(systemName: "person.circle.fill")
+                }
+            } else {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.UserImageView.image = result
+                }
+            }
+        }
+    }
 }

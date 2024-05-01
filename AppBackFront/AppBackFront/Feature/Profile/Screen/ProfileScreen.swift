@@ -5,9 +5,9 @@
 //  Created by Lucas Neves dos santos pompeu on 15/09/23.
 //
 
-import UIKit
+import SwiftUI
 
-class ProfileScreen: UIView {
+final class ProfileScreen: UIView {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView()

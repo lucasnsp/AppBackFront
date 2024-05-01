@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 protocol HomeServiceDelegate: GenericService {
      func getHomeFromJson(completion: @escaping completion<NFTData?>)
@@ -14,26 +13,20 @@ protocol HomeServiceDelegate: GenericService {
 }
 
 
-class HomeService: HomeServiceDelegate {
+final class HomeService: HomeServiceDelegate {
     
-    func getHome(completion: @escaping completion<NFTData?>) {
-        let url: String = "https://run.mocky.io/v3/ac3f7ec4-c487-4332-b4bd-1f2f15aef6f5"
-        
-        AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: NFTData.self) { response in
-            debugPrint(response)
-            switch response.result {
-            case.success(let success):
-                print("SUCCESS -> \(#function)")
-                completion(success, nil)
-            case.failure(let error):
-                print("ERROR -> \(#function)")
-                completion(nil, Error.errorRequest(error))
-            }
-        }
+    let network: Network
+    
+    init(network: Network  = .shared) {
+        self.network = network
     }
     
-    
-    
+    func getHome(completion: @escaping completion<NFTData?>) {
+        network.requestData(url: .nftData, type: NFTData.self) { result, failure in
+            guard let result  else { return completion(nil, failure) }
+            completion(result, nil)
+        }
+    }
     
     
     

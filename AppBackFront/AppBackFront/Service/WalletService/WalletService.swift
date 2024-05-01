@@ -6,44 +6,24 @@
 //
 
 import UIKit
-import Alamofire
 
 
 protocol WalletServiceDelegate: GenericService {
-     func getWalletFromJson(completion: @escaping completion<WalletData?>)
      func getWallet(completion: @escaping completion<WalletData?>)
 }
 
-class WalletService: WalletServiceDelegate {
+final class WalletService: WalletServiceDelegate {
+    
+    let network: Network
+    init(network: Network  = .shared) {
+        self.network = network
+    }
     
     func getWallet(completion: @escaping completion<WalletData?>) {
-        let url: String = "https://run.mocky.io/v3/70318389-3b0c-47cf-a529-e66ca8cf050f"
         
-        AF.request(url, method: .get).validate(statusCode: 200...299).responseDecodable(of: WalletData.self) { response in
-            debugPrint(response)
-            switch response.result {
-            case.success(let success):
-                print("SUCCESS -> \(#function)")
-                completion(success, nil)
-            case.failure(let error):
-                print("ERROR -> \(#function)")
-                completion(nil, Error.errorRequest(error))
-            }
-        }
-    }
-    
-    
-    func getWalletFromJson(completion: @escaping completion<WalletData?>) {
-        if let url = Bundle.main.url(forResource: "WalletData", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let result: WalletData = try JSONDecoder().decode(WalletData.self, from: data)
+        network.requestData(url: .wallet, type: WalletData.self) { result, failure in
+                guard let result  else { return completion(nil, failure) }
                 completion(result, nil)
-            } catch  {
-                completion(nil, Error.fileDecodingFailed(name: "WalletData", error))
             }
-        } else {
-            completion(nil, Error.fileNotFound(name: "WalletData"))
         }
-    }
 }

@@ -7,6 +7,6 @@
 
 import UIKit
 
-class ProfileViewModel: NSObject {
+final class ProfileViewModel: NSObject {
 
 }

@@ -7,15 +7,16 @@
 
 import UIKit
 
-class WalletScreen: UIView {
+final class WalletScreen: UIView {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(QuotationEthTableViewCell.self, forCellReuseIdentifier: QuotationEthTableViewCell.identifier)
         tableView.register(LatestTransactionsTableViewCell.self, forCellReuseIdentifier: LatestTransactionsTableViewCell.identifier)
-        tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1.0)
+        tableView.backgroundColor = TransactionCellColors.background
         tableView.separatorStyle = .none
+        tableView.isScrollEnabled = false
         return tableView
     }()
     
@@ -26,7 +27,7 @@ class WalletScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1.0)
+        backgroundColor = TransactionCellColors.background
         addViews()
         configConstraints()
     }
@@ -44,7 +45,7 @@ class WalletScreen: UIView {
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 }

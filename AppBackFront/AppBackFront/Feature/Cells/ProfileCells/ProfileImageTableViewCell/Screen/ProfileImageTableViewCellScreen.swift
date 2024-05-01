@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileImageTableViewCellScreen: UIView {
+final class ProfileImageTableViewCellScreen: UIView {
     
     lazy var nftImageView: UIImageView = {
         let imageView = UIImageView()

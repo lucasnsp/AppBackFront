@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NftFilterCollectionViewCell: UICollectionViewCell {
+final class NftFilterCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = String(describing: NftFilterCollectionViewCell.self)
     

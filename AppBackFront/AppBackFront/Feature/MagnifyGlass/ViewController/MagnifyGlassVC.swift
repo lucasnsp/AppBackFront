@@ -6,20 +6,21 @@
 //
 
 import UIKit
-import AlamofireImage
 
-class MagnifyGlassVC: UIViewController {
+final class MagnifyGlassVC: UIViewController {
     
     private var screen: MagnifyGlassScreen?
     private var urlImage: String
+    private var network: Network
     
     override func loadView() {
         screen = MagnifyGlassScreen()
         view = screen
     }
     
-    required init(urlImage: String) {
+    required init(urlImage: String, network: Network = .shared) {
         self.urlImage = urlImage
+        self.network = network
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,7 +36,12 @@ class MagnifyGlassVC: UIViewController {
     
     private func configImage() {
         guard let url = URL(string: urlImage) else { return }
-        screen?.nftImageView.af.setImage(withURL: url)
+        network.requestImage(url: url) { result, failure in
+            guard let result else { return }
+            RunLoop.main.perform { [weak self] in
+                self?.screen?.nftImageView.image = result
+            }
+        }
     }
 }
 

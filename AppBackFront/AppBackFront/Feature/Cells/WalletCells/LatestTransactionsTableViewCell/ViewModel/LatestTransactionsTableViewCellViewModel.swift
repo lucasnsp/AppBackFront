@@ -11,7 +11,7 @@ enum HeighLatestTransactions: CGFloat {
     case height = 70
 }
 
-class LatestTransactionsTableViewCellViewModel {
+final class LatestTransactionsTableViewCellViewModel {
     
     var data: LatestTransactionsCell?
     

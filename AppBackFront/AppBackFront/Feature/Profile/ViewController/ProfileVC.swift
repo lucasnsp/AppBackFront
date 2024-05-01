@@ -5,9 +5,15 @@
 //  Created by Lucas Neves dos santos pompeu on 15/09/23.
 //
 
-import UIKit
+import SwiftUI
 
-class ProfileVC: UIViewController {
+final class ProfileVC: UIViewController, ButtonDelegate {
+    func tappedExitAppButton() {
+        let vc = LoginVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
 
     var screen: ProfileScreen?
     
@@ -22,7 +28,20 @@ class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.configTableViewProtocols(delegate: self, dataSource: self)
+        let profileView = ProfileView(delegate: self)
+        let hostingController = UIHostingController(rootView: profileView)
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+                    hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+                    hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                    hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                ])
+        
+        hostingController.didMove(toParent: self)
+       // screen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
     
 }
@@ -38,7 +57,7 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
             return cell ?? UITableViewCell()
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
-            cell?.setupCell(delegate: self)
+          //  cell?.setupCell(delegate: self)
             return cell ?? UITableViewCell()
         }
     }
@@ -48,12 +67,12 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ProfileVC: ProfileTableViewCellScreenDelegate {
-    func tappedExitAppButton() {
-        let vc = LoginVC()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
-    }
-    
-    
-}
+//extension ProfileVC: ProfileTableViewCellScreenDelegate {
+//    func tappedExitAppButton() {
+//        let vc = LoginVC()
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true)
+//    }
+//    
+//    
+//}

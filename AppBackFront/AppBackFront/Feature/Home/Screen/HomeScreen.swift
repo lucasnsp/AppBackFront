@@ -7,12 +7,12 @@
 
 import UIKit
 
-class HomeScreen: UIView {
+final class HomeScreen: UIView {
     
     lazy var viewBackground: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        view.backgroundColor = UIColor(resource: .background)
         return view
     }()
     
@@ -36,7 +36,7 @@ class HomeScreen: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        collectionView.backgroundColor = UIColor(resource: .background)
         collectionView.register(NftFilterCollectionViewCell.self, forCellWithReuseIdentifier: NftFilterCollectionViewCell.identifier)
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
@@ -49,7 +49,7 @@ class HomeScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(NftTableViewCell.self, forCellReuseIdentifier: NftTableViewCell.identifier)
-        tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        tableView.backgroundColor = UIColor(resource: .background)
         tableView.separatorStyle = .none
         return tableView
     }()
@@ -71,7 +71,7 @@ class HomeScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 1/255, alpha: 1.0)
+        backgroundColor = UIColor(resource: .background)
         addViews()
         configConstraints()
     }

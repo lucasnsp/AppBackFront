@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListOfTransactionTableViewCellScreen: UIView {
+final class ListOfTransactionTableViewCellScreen: UIView {
     
     lazy var idTransactionLabel: UILabel = {
         let label = UILabel()

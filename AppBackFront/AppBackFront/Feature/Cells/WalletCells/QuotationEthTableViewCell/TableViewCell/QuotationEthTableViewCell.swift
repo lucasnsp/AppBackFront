@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuotationEthTableViewCell: UITableViewCell {
+final class QuotationEthTableViewCell: UITableViewCell {
 
     static let identifier: String = String(describing: QuotationEthTableViewCell.self)
     
@@ -36,7 +36,7 @@ class QuotationEthTableViewCell: UITableViewCell {
             screen.topAnchor.constraint(equalTo: topAnchor),
             screen.leadingAnchor.constraint(equalTo: leadingAnchor),
             screen.trailingAnchor.constraint(equalTo: trailingAnchor),
-            screen.bottomAnchor.constraint(equalTo: bottomAnchor),
+            screen.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
@@ -44,6 +44,8 @@ class QuotationEthTableViewCell: UITableViewCell {
         screen.ethValueLabel.text = "\(data.ethValue ?? 0) ETH"
         screen.ethValueInDollarsLabel.text = "$ \(data.valueInDollars ?? 0)"
         screen.coinEthImageView.image = UIImage(named: data.coinEthImage ?? "")
+     
+        
     }
 
 }

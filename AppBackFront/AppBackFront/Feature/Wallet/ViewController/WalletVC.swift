@@ -5,14 +5,14 @@
 //  Created by Lucas Neves dos santos pompeu on 14/09/23.
 //
 
-import UIKit
+import SwiftUI
 
 enum  WalletNameCell: Int {
     case quotationEth = 0
     case transactionList = 1
 }
 
-class WalletVC: UIViewController {
+final class WalletVC: UIViewController {
     
     var screen: WalletScreen?
     var viewModel: WalletViewModel = WalletViewModel()
@@ -29,7 +29,7 @@ class WalletVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate(delegate: self)
-        viewModel.fetch(.mock)
+        viewModel.fetch()
     }
     
     
@@ -58,12 +58,19 @@ extension WalletVC: UITableViewDelegate, UITableViewDataSource {
             
         case.quotationEth:
             let cell = tableView.dequeueReusableCell(withIdentifier: QuotationEthTableViewCell.identifier, for: indexPath) as? QuotationEthTableViewCell
-            cell?.setupCell(data: viewModel.quotationEthereum)
+            cell?.contentConfiguration = UIHostingConfiguration {
+                QuotationEthCell(quotationEthereum: viewModel.quotationEthereum)
+            }
+            
             return cell ?? UITableViewCell()
             
         case.transactionList:
             let cell = tableView.dequeueReusableCell(withIdentifier: LatestTransactionsTableViewCell.identifier, for: indexPath) as? LatestTransactionsTableViewCell
-            cell?.setupCell(data: viewModel.latestTransactionsCell)
+           // cell?.setupCell(data: viewModel.latestTransactionsCell)
+            
+            cell?.contentConfiguration = UIHostingConfiguration {
+                LatestTransactionsViewCell(cell: viewModel.latestTransactionsCell)
+            }
             return cell ?? UITableViewCell()
             
         default:

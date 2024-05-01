@@ -12,7 +12,7 @@ protocol NftImageTableViewCellScreenDelegate: AnyObject {
     func tappedMagnifyingGlassButton()
 }
 
-class NftImageTableViewCellScreen: UIView {
+final class NftImageTableViewCellScreen: UIView {
     
     private weak var delegate: NftImageTableViewCellScreenDelegate?
     

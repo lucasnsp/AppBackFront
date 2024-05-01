@@ -6,11 +6,11 @@
 //
 
 import UIKit
-import AlamofireImage
 
-class NftImageTableViewCell: UITableViewCell {
+final class NftImageTableViewCell: UITableViewCell {
     
     static let identifier: String = String(describing: NftImageTableViewCell.self)
+    let network: Network = .shared
     
     private lazy var screen: NftImageTableViewCellScreen = {
         let view = NftImageTableViewCellScreen()
@@ -42,9 +42,24 @@ class NftImageTableViewCell: UITableViewCell {
     }
     
     public func setupCell(urlImage: String, delegate: NftImageTableViewCellScreenDelegate) {
-        if let url: URL = URL(string: urlImage) {
-            screen.nftImageView.af.setImage(withURL: url)
-        }
+        configureNftImage(urlImage: urlImage)
         screen.delegate(delegate: delegate)
+    }
+    
+    private func configureNftImage(urlImage: String) {
+        guard let url = URL(string: urlImage) else { return
+            screen.nftImageView.image = UIImage(systemName: "threeButtons")
+        }
+        network.requestImage(url: url) { result, failure in
+            if failure != nil {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.nftImageView.image = UIImage(systemName: "threeButtons")
+                }
+            } else {
+                RunLoop.main.perform { [weak self] in
+                    self?.screen.nftImageView.image = result
+                }
+            }
+        }
     }
 }

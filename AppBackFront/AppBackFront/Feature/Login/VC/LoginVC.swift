@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginVC: UIViewController {
+final class LoginVC: UIViewController {
     
     var loginScreen: LoginScreen?
     var auth: Auth?

@@ -13,7 +13,7 @@ enum NameCellNftDetail: Int {
     case latestDeal = 2
 }
 
-class NftDetailVC: UIViewController {
+final class NftDetailVC: UIViewController {
     
     private var screen: NftDetailScreen?
     private let viewModel: NftDetailViewModel

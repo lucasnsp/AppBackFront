@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NftFilterCollectionViewCellScreen: UIView {
+final class NftFilterCollectionViewCellScreen: UIView {
     
     lazy var filterLabel: UILabel = {
         let label = UILabel()

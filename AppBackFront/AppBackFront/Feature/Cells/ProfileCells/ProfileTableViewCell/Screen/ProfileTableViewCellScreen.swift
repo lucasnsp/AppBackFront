@@ -11,7 +11,7 @@ protocol ProfileTableViewCellScreenDelegate: AnyObject {
     func tappedExitAppButton()
 }
 
-class ProfileTableViewCellScreen: UIView {
+final class ProfileTableViewCellScreen: UIView {
     
     private weak var delegate: ProfileTableViewCellScreenDelegate?
     

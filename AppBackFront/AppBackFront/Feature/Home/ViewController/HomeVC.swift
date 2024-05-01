@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+final class HomeVC: UIViewController {
     
     var screen: HomeScreen?
     var viewModel = HomeViewModel()
@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         screen?.configSearchBarDelegate(delegate: self)
         viewModel.delegate(delegate: self)
-        viewModel.fetchRequest(.request)
+        viewModel.fetchRequest()
     }
 }
 

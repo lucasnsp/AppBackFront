@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NftDescriptionTableViewCellScreen: UIView {
+final class NftDescriptionTableViewCellScreen: UIView {
     
     lazy var idLabel: UILabel = {
         let label = UILabel()
