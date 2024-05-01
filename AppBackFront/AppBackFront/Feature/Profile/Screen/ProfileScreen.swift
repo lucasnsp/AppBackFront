@@ -5,7 +5,7 @@
 //  Created by Lucas Neves dos santos pompeu on 15/09/23.
 //
 
-import UIKit
+import SwiftUI
 
 final class ProfileScreen: UIView {
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A17F4C12BE2A11600C5649D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17F4C02BE2A11600C5649D /* ProfileView.swift */; };
 		3A1835932BE0D5260086D01B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3A1835922BE0D5260086D01B /* README.md */; };
 		3A18359B2BE0E6460086D01B /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18359A2BE0E6460086D01B /* HomeViewModelTests.swift */; };
 		3A1835A42BE0F3650086D01B /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1835A32BE0F3650086D01B /* NetworkTests.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A17F4C02BE2A11600C5649D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3A1835922BE0D5260086D01B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3A1835982BE0E6460086D01B /* AppBackFrontTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBackFrontTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A18359A2BE0E6460086D01B /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				463FB9D92AB5D1CC0041DD08 /* ProfileTableViewCellScreen.swift */,
+				3A17F4C02BE2A11600C5649D /* ProfileView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -1038,6 +1041,7 @@
 				46461A1F2AB33C2C0042765C /* WalletScreen.swift in Sources */,
 				463FB9BA2AB487360041DD08 /* LatestTransactionsTableViewCellViewModel.swift in Sources */,
 				463FB9D32AB4C03F0041DD08 /* ProfileImageTableViewCellScreen.swift in Sources */,
+				3A17F4C12BE2A11600C5649D /* ProfileView.swift in Sources */,
 				464D40D52AA8B29700D5DFDE /* HomeVC.swift in Sources */,
 				462C8C0C2AA60E8E00E85A9E /* UIViewController+Extension.swift in Sources */,
 				46461A2B2AB341A90042765C /* WalletData.swift in Sources */,
